@@ -1,9 +1,6 @@
 package videoSite.Controller;
 
-import videoSite.Model.BillingAddress;
 import videoSite.Model.Customer;
-import videoSite.Model.ShippingAddress;
-import videoSite.Service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,11 +16,10 @@ import java.util.List;
 /**
  * Created by root on 10/19/16.
  */
-@Controller
+/*@Controller
 public class RegisterController {
 
     @Autowired
-    private CustomerService customerService;
 
     @RequestMapping(value ="/register", method = RequestMethod.GET)
     public String registerCustomer(Model model){
@@ -65,4 +61,4 @@ public class RegisterController {
 
         return "registerCustomerSuccess";
     }
-}
+}*/

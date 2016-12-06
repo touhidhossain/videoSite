@@ -1,9 +1,10 @@
 package videoSite.Model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.NotEmpty;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
@@ -18,8 +19,11 @@ public class Customer implements Serializable{
     @GeneratedValue
     private long customerId;
 
-    @NotEmpty(message = "The Customer name must not be null.")
-    private String customerName;
+    @NotEmpty(message = "The Customer first name must not be null.")
+    private String customerFirstName;
+
+    @NotEmpty(message = "The Customer last name must not be null.")
+    private String customerLastName;
 
     @NotEmpty(message = "The Customer email must not be null.")
     private String customerEmail;
@@ -35,19 +39,6 @@ public class Customer implements Serializable{
 
     private boolean enable;
 
-    @OneToOne
-    @JoinColumn(name = "billingAddressId")
-    private BillingAddress billingAddress;
-
-    @OneToOne
-    @JoinColumn(name = "shippingAddressId")
-    private ShippingAddress shippingAddress;
-
-    @OneToOne
-    @JoinColumn(name = "cartId")
-    @JsonIgnore
-    private Cart cart;
-
     public long getCustomerId() {
         return customerId;
     }
@@ -56,12 +47,20 @@ public class Customer implements Serializable{
         this.customerId = customerId;
     }
 
-    public String getCustomerName() {
-        return customerName;
+    public String getCustomerFirstName() {
+        return customerFirstName;
     }
 
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
+    public void setCustomerFirstName(String customerFirstName) {
+        this.customerFirstName = customerFirstName;
+    }
+
+    public String getCustomerLastName() {
+        return customerLastName;
+    }
+
+    public void setCustomerLastName(String customerLastName) {
+        this.customerLastName = customerLastName;
     }
 
     public String getCustomerEmail() {
@@ -102,29 +101,5 @@ public class Customer implements Serializable{
 
     public void setEnable(boolean enable) {
         this.enable = enable;
-    }
-
-    public BillingAddress getBillingAddress() {
-        return billingAddress;
-    }
-
-    public void setBillingAddress(BillingAddress billingAddress) {
-        this.billingAddress = billingAddress;
-    }
-
-    public ShippingAddress getShippingAddress() {
-        return shippingAddress;
-    }
-
-    public void setShippingAddress(ShippingAddress shippingAddress) {
-        this.shippingAddress = shippingAddress;
-    }
-
-    public Cart getCart() {
-        return cart;
-    }
-
-    public void setCart(Cart cart) {
-        this.cart = cart;
     }
 }
