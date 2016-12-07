@@ -16,6 +16,11 @@ public class HomeController {
         return "home";
     }
 
+    @RequestMapping("/test")
+    public String test(){
+        return "test";
+    }
+
     @RequestMapping("/login")
     public String login(@RequestParam(value = "error", required = false) String error,
                         @RequestParam(value = "logout", required = false) String logout, Model model){

@@ -1,10 +1,13 @@
 package videoSite.Model;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
 import java.io.Serializable;
 
 /**
@@ -20,22 +23,43 @@ public class Customer implements Serializable{
     private long customerId;
 
     @NotEmpty(message = "The Customer first name must not be null.")
-    private String customerFirstName;
+    private String firstName;
 
     @NotEmpty(message = "The Customer last name must not be null.")
-    private String customerLastName;
+    private String lastName;
 
     @NotEmpty(message = "The Customer email must not be null.")
-    private String customerEmail;
+    @Email(message = "Input corrcet email id.")
+    private String email;
 
     @NotEmpty(message = "The Customer phone no must not be null.")
-    private String customerPhone;
+    private String contact;
 
     @NotEmpty(message = "Username must not be null.")
-    private String username;
+    private String userName;
 
     @NotEmpty(message = "Password must not be null.")
     private String password;
+
+    private String bloodGroup;
+
+    @NotEmpty(message = "Street not be null.")
+    private String street;
+
+    @NotEmpty(message = "Area not be null.")
+    private String area;
+
+    @Min(value = 1,message = "Input postal code.")
+    private int postalCode;
+
+    @NotEmpty(message = "City not be null.")
+    private String city;
+
+    @NotEmpty(message = "District not be null.")
+    private String district;
+
+    @NotEmpty(message = "Country not be null.")
+    private String country;
 
     private boolean enable;
 
@@ -47,44 +71,44 @@ public class Customer implements Serializable{
         this.customerId = customerId;
     }
 
-    public String getCustomerFirstName() {
-        return customerFirstName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setCustomerFirstName(String customerFirstName) {
-        this.customerFirstName = customerFirstName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getCustomerLastName() {
-        return customerLastName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setCustomerLastName(String customerLastName) {
-        this.customerLastName = customerLastName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getCustomerEmail() {
-        return customerEmail;
+    public String getEmail() {
+        return email;
     }
 
-    public void setCustomerEmail(String customerEmail) {
-        this.customerEmail = customerEmail;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getCustomerPhone() {
-        return customerPhone;
+    public String getContact() {
+        return contact;
     }
 
-    public void setCustomerPhone(String customerPhone) {
-        this.customerPhone = customerPhone;
+    public void setContact(String contact) {
+        this.contact = contact;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPassword() {
@@ -93,6 +117,62 @@ public class Customer implements Serializable{
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getBloodGroup() {
+        return bloodGroup;
+    }
+
+    public void setBloodGroup(String bloodGroup) {
+        this.bloodGroup = bloodGroup;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
+    public int getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(int postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getDistrict() {
+        return district;
+    }
+
+    public void setDistrict(String district) {
+        this.district = district;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     public boolean isEnable() {
