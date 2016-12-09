@@ -69,15 +69,15 @@
             <label class="col-md-4 control-label" for="bloodGroup">Blood Group</label>
             <div class="col-md-4">
                 <form:select id="bloodGroup" path="bloodGroup" class="form-control">
-                    <option value="-1">Select</option>
-                    <option value="1">A+</option>
-                    <option value="2">B+</option>
-                    <option value="3">AB+</option>
-                    <option value="4">O+</option>
-                    <option value="5">A-</option>
-                    <option value="6">B-</option>
-                    <option value="7">AB-</option>
-                    <option value="8">O-</option>
+                    <option value="">Select</option>
+                    <option value="A+">A+</option>
+                    <option value="B+">B+</option>
+                    <option value="AB+">AB+</option>
+                    <option value="O+">O+</option>
+                    <option value="A-">A-</option>
+                    <option value="B-">B-</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O-">O-</option>
                 </form:select>
             </div>
         </div>

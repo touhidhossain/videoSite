@@ -182,4 +182,24 @@ public class Customer implements Serializable{
     public void setEnable(boolean enable) {
         this.enable = enable;
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", contact='" + contact + '\'' +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", bloodGroup='" + bloodGroup + '\'' +
+                ", street='" + street + '\'' +
+                ", area='" + area + '\'' +
+                ", postalCode=" + postalCode +
+                ", city='" + city + '\'' +
+                ", district='" + district + '\'' +
+                ", country='" + country + '\'' +
+                ", enable=" + enable +
+                '}';
+    }
 }
