@@ -3,11 +3,11 @@
 			<div class="main-grids">
 				<div class="top-grids">
 					<div class="recommended-info">
-						<h3>Recent Videos</h3>
+						<a href="recentVideos.jsp"><h3>Recent Videos</h3></a>
 					</div>
 					<div class="col-md-4 resent-grid recommended-grid slider-top-grids">  <!--- Row repeat -->
 						<div class="resent-grid-img recommended-grid-img">
-							<a href="single.jsp"><img src="images/t1.jpg" alt="" /></a>
+							<a href="single.jsp"><img src="<c:url value="/resources/images/t1.jpg"/>" alt="" /></a>
 							<div class="time">
 								<p>3:04</p>
 							</div>
@@ -25,7 +25,7 @@
 					</div>    <!--- Row repeat -->
 					<div class="col-md-4 resent-grid recommended-grid slider-top-grids">  <!--- Row repeat -->
 						<div class="resent-grid-img recommended-grid-img">
-							<a href="single.jsp"><img src="images/t2.jpg" alt="" /></a>
+							<a href="single.jsp"><img src="<c:url value="/resources/images/t2.jpg"/>" alt="" /></a>
 							<div class="time">
 								<p>7:23</p>
 							</div>
@@ -43,7 +43,7 @@
 					</div>  <!--- Row repeat -->
 					<div class="col-md-4 resent-grid recommended-grid slider-top-grids">
 						<div class="resent-grid-img recommended-grid-img">
-							<a href="single.jsp"><img src="images/t3.jpg" alt="" /></a>
+							<a href="single.jsp"><img src="<c:url value="/resources/images/t3.jpg"/>" alt="" /></a>
 							<div class="time">
 								<p>4:04</p>
 							</div>
